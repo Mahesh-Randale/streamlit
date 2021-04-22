@@ -111,9 +111,9 @@ def play_image(char):
 	path = "images"
 	p1 = "gestures"
 	if(char == " "):
-		final = os.path.join(path ,p1 , "0.jpg")
+		final = os.path.join(path , "0.jpg")
 	else:
-		final = os.path.join(path , p1 , char +".jpg")
+		final = os.path.join(path , char +".jpg")
 		#print(final)
 	gesture = Image.open(final)
 	return  gesture
