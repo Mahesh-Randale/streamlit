@@ -4,6 +4,7 @@ from keras.models import model_from_json
 from string import ascii_uppercase
 import numpy as np
 import operator
+import os
 import streamlit as st
 from PIL import Image
 import time
@@ -107,11 +108,12 @@ def app_sign_to_text():
 
 # MODE 2
 def play_image(char):
-	path = r"images\\gestures\\"
+	path = "images"
+	p1 = "gestures"
 	if(char == " "):
-		final = path + "0.jpg"
+		final = os.path.join(path ,p1 , "0.jpg")
 	else:
-		final = path + char +".jpg"
+		final = os.path.join(path , char ,".jpg")
 		#print(final)
 	gesture = Image.open(final)
 	return  gesture
