@@ -110,6 +110,7 @@ def app_sign_to_text():
 def play_image(char):
 	path = "images"
 	p1 = "gestures"
+	char = char.lower()
 	if(char == " "):
 		final = os.path.join(path , "0.jpg")
 	else:
